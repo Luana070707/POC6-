@@ -1,8 +1,8 @@
-# POC 6 - Aplicação NextJS: Sistema de Reservas de Assentos
+# POC 6 - Aplicação NextJS: Sistema de Reservas de Assentos💻
 
 Este é um projeto desenvolvido em Next.js com foco na criação de uma interface para reserva de assentos de cinema. O projeto apresenta uma página responsiva com suporte a temas Light e Dark, utilizando dados de um arquivo JSON.
 
-## Objetivo:
+## Objetivo🎯:
 
 Criar uma interface interativa e responsiva que permita:
 
@@ -11,14 +11,14 @@ Criar uma interface interativa e responsiva que permita:
 - Realizar a compra dos ingressos com cálculo do valor total.
 
 
-## Tecnologias Utilizadas: 
+## Tecnologias Utilizadas🧩 : 
 - Next.js 14+
 - React 18+
 - HTML5 e CSS3 (Flexbox)
 - Media Queries para responsividade e temas
 - JSON para simular dados dinâmicos
 
-## Planejamento Visual: 
+## Planejamento Visual🎨: 
 Temas que estaram nesse projeto: 
 
 -  Light/Dark Mode
@@ -26,7 +26,7 @@ Temas que estaram nesse projeto:
 ![corespoc6](https://github.com/user-attachments/assets/67809e2a-3c3d-4748-a3ea-dda1f0b5ed40)
 
 
-## Passo a Passo para Criar o Projeto: 
+## Passo a Passo para Criar o Projeto📝: 
 1. Instalar o Node.js e npm
 Certifique-se de ter o Node.js (versão 18 ou superior) instalado no seu computador.
 Para verificar, execute os comandos:
@@ -36,7 +36,7 @@ node -v
 npm -v
 ```
 
-2. Criar o Projeto Next.js:
+2. Criar o Projeto Next.js📟:
 - Abra o prompt de comando (para isso aperte windowns + R em seguida digite cmd)
 - Ou  o terminal do vscode (para isso vá até vs code e aperte Ctrl + a tecla debaixo do Esc, isso varia dependendo do seu teclado)
 - E execute o seguinte comando:
@@ -46,7 +46,7 @@ npx create-next-app@latest poc6
 ```
 3. Durante a criação, você pode personalizar algumas opções (ou deixar as configurações padrão):
 
-- Siga conforem a imagem abaixo:
+- Siga conforme a imagem abaixo:
 
 ![poc8](https://github.com/user-attachments/assets/cef1cfb1-42d3-4719-960d-d987bc7caf99)
 
@@ -70,7 +70,9 @@ npm run dev
 ```
 A aplicação estará disponível em `http://localhost:3000.`
 
-## Estrutura do Projeto: 
+## Estrutura do Projeto📂: 
+
+```
 
 POC6/
 ├── src/
@@ -87,8 +89,11 @@ POC6/
 ├── package.json
 ├── README.md
 
+```
+- Esses são diretórios presentes no Visual Studio Code. 
 
-## Adicionar Dados dos Assentos: 
+
+## Adicionar Dados dos Assentos💾: 
 - No arquivo `src/data/dados.json` coloque: 
 
  
@@ -109,7 +114,7 @@ POC6/
 
 ```
 
-## Criar o Componente de Assento
+## Criar o Componente de Assento🗂️ : 
 - No arquivo `src/components/Seat.jsx` coloque:
 
 ```
@@ -131,7 +136,7 @@ export default function Seat({ numero, disponivel, onClick, selected, purchased 
 ```
 
 ## Estilizar o Projeto: 
--  Light/Dark Mode
+-  Light/Dark Mode🌞🌙
 - No arquivo `src/styles/globals.css` coloque:
 
 ```
@@ -183,7 +188,7 @@ export default function Seat({ numero, disponivel, onClick, selected, purchased 
 ```
 - Esse é o código de configuração geral do comportamento de body.
 
-## Organização dos assentos: 
+## Organização dos assentos🗃️: 
 - No arquivo `src/styles/page.module.css` colouque:
 
 ```
@@ -220,7 +225,7 @@ export default function Seat({ numero, disponivel, onClick, selected, purchased 
 ```
 - Isso definira os estilos para organizar e estilizar elementos de uma aplicação de reservas de assentos
 
-## Responsividade
+## Responsividade📱:
 - Layout adaptado para dispositivos móveis, tablets e desktops usando Media Queries.
 - Temas Light e Dark podem ser alternados com base nas preferências do sistema operacional ou configurados manualmente.
 
@@ -343,7 +348,7 @@ export default function Seat({ numero, disponivel, onClick, selected, purchased 
 
 - Resultado: essas configurações garantem que o projeto funcione de maneira fluida em qualquer dispositivo. Em telas menores, a interface prioriza a clareza e a usabilidade, ocultando informações secundárias (como sinopse) e ajustando elementos como grades e botões para que fiquem acessíveis e visualmente organizados.
 
-### Importação de Dependências: 
+### Importação de Dependências📥: 
 
 ```
 
@@ -359,7 +364,7 @@ import styles from "./styles/page.module.css";**
 - Seat: Importa o componente Seat, que representa cada assento individual.
 - styles: Importa os estilos CSS para a página principal.
 
-### Gerenciamento de Estado:
+### Gerenciamento de Estado📊:
 
 ```
 
@@ -368,7 +373,7 @@ const [selectedSeats, setSelectedSeats] = useState([]);
 ```
 - O estado selectedSeats armazena os números dos assentos que foram selecionados pelo usuário.
 
-### Função para Gerenciar a Seleção de Assentos
+### Função para Gerenciar a Seleção de Assentos🛑: 
 
 ```
 
@@ -383,16 +388,16 @@ const OrganizarSelectSeat = (numero) => {
 ```
 - Isso faz com que altere a seleção dos assentos. Se o número do assento já estiver na lista (selectedSeats), ele será removido. Caso contrário, será adicionado. Essa lógica permite que o estado se atualize dinamicamente à medida que o usuário interage com os assentos.
 
-### Cálculo do Total:
+### Cálculo do Total💰:
+- Multiplica o número de assentos selecionados pelo preço fixo de cada ingresso (ticketPrice).
 
 ```
 
 const total = selectedSeats.length * ticketPrice;
 
 ```
-- Multiplica o número de assentos selecionados pelo preço fixo de cada ingresso (ticketPrice).
 
-### Estrutura do Componente: 
+### Estrutura do Componente🛠️ : 
 
 ```
 
@@ -425,7 +430,7 @@ return (
 
 ![poc20](https://github.com/user-attachments/assets/03fac270-a977-4ac7-971b-e397074b2f53)
 
-## como usar a aplicação após configurada: 
+## como usar a aplicação após configurada💡: 
 
 1. Abra a aplicação no navegador em `http://localhost:3000`.
 2. Escolha os assentos disponíveis clicando sobre eles.

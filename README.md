@@ -19,7 +19,7 @@ Criar uma interface interativa e responsiva que permita:
 - JSON para simular dados dinâmicos
 
 ## Planejamento Visual🎨: 
-Temas que estaram nesse projeto: 
+Temas que vão estar nesse projeto: 
 
 -  Light/Dark Mode
 
